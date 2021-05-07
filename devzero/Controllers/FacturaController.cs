@@ -38,6 +38,19 @@ namespace devzero.Controllers
             return Ok(Response.Mensaje);
         }
 
+        [HttpGet]
+        public ActionResult<FacturaViewModel> ConsultarFacturas( ){
+            var Response = _service.ConsultarFacturas();
+            if(Response.Error){
+                ModelState.AddModelError("Error al consultar a las facturas", Response.Mensaje);
+                var detalleProblemas = new ValidationProblemDetails(ModelState);
+                detalleProblemas.Status=StatusCodes.Status500InternalServerError;
+
+                return BadRequest(detalleProblemas);
+            }
+            return Ok(Response.Facturas);
+        }
+
         private Factura Mapear(FacturaInputModel facturaInputModel){
             var factura = new Factura{
                 UsuarioId=facturaInputModel.UsuarioId,

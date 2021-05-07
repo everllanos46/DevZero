@@ -7,6 +7,22 @@ namespace Datos.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "facturas",
+                columns: table => new
+                {
+                    FacturaId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Total = table.Column<double>(type: "float", nullable: false),
+                    TotalDescontado = table.Column<double>(type: "float", nullable: false),
+                    TotalIVA = table.Column<double>(type: "float", nullable: false),
+                    UsuarioId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    InteresadoId = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_facturas", x => x.FacturaId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "interesados",
                 columns: table => new
                 {
@@ -52,24 +68,27 @@ namespace Datos.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "facturas",
+                name: "detalles",
                 columns: table => new
                 {
-                    FacturaId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    DetalleId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    CantidadProducto = table.Column<int>(type: "int", nullable: false),
                     Total = table.Column<double>(type: "float", nullable: false),
+                    Descuento = table.Column<double>(type: "float", nullable: false),
+                    ValorProducto = table.Column<double>(type: "float", nullable: false),
                     TotalDescontado = table.Column<double>(type: "float", nullable: false),
                     TotalIVA = table.Column<double>(type: "float", nullable: false),
-                    UsuarioId = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    InteresadoId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    ProductoId = table.Column<int>(type: "int", nullable: false),
+                    FacturaId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_facturas", x => x.FacturaId);
+                    table.PrimaryKey("PK_detalles", x => x.DetalleId);
                     table.ForeignKey(
-                        name: "FK_facturas_interesados_InteresadoId",
-                        column: x => x.InteresadoId,
-                        principalTable: "interesados",
-                        principalColumn: "Identificacion",
+                        name: "FK_detalles_facturas_FacturaId",
+                        column: x => x.FacturaId,
+                        principalTable: "facturas",
+                        principalColumn: "FacturaId",
                         onDelete: ReferentialAction.Restrict);
                 });
 
@@ -100,40 +119,10 @@ namespace Datos.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "detalles",
-                columns: table => new
-                {
-                    DetalleId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    CantidadProducto = table.Column<int>(type: "int", nullable: false),
-                    Total = table.Column<double>(type: "float", nullable: false),
-                    Descuento = table.Column<double>(type: "float", nullable: false),
-                    ValorProducto = table.Column<double>(type: "float", nullable: false),
-                    TotalDescontado = table.Column<double>(type: "float", nullable: false),
-                    TotalIVA = table.Column<double>(type: "float", nullable: false),
-                    ProductoId = table.Column<int>(type: "int", nullable: false),
-                    FacturaId = table.Column<string>(type: "nvarchar(450)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_detalles", x => x.DetalleId);
-                    table.ForeignKey(
-                        name: "FK_detalles_facturas_FacturaId",
-                        column: x => x.FacturaId,
-                        principalTable: "facturas",
-                        principalColumn: "FacturaId",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
             migrationBuilder.CreateIndex(
                 name: "IX_detalles_FacturaId",
                 table: "detalles",
                 column: "FacturaId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_facturas_InteresadoId",
-                table: "facturas",
-                column: "InteresadoId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_productos_IdProveedor",
@@ -147,6 +136,9 @@ namespace Datos.Migrations
                 name: "detalles");
 
             migrationBuilder.DropTable(
+                name: "interesados");
+
+            migrationBuilder.DropTable(
                 name: "productos");
 
             migrationBuilder.DropTable(
@@ -157,9 +149,6 @@ namespace Datos.Migrations
 
             migrationBuilder.DropTable(
                 name: "proveedores");
-
-            migrationBuilder.DropTable(
-                name: "interesados");
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Datos;
 using Entidad;
+using Microsoft.EntityFrameworkCore;
 
 namespace BLL
 {
@@ -62,9 +63,36 @@ namespace BLL
             return actualizarCantidadResponse;
         }
 
+        public ProductoConsultarResponse ConsultarProductos()
+        {
+            ProductoConsultarResponse productoConsultarResponse = new ProductoConsultarResponse();
+            try
+            {
+                productoConsultarResponse.Error = false;
+                productoConsultarResponse.Mensaje = "Consultado correctamente";
+                productoConsultarResponse.Productos = _TiendaContext.productos.Include(p => p.Proveedor).ToList();
+            }
+            catch (Exception e)
+            {
+                productoConsultarResponse.Error = true;
+                productoConsultarResponse.Mensaje = $"Hubo un error al momento de consultar, {e.Message}";
+                productoConsultarResponse.Productos =null;
+            }
+            return productoConsultarResponse;
+        }
+
+
+
         public class ActualizarCantidadResponse{
             public bool Error{get; set;}
             public string Mensaje{get; set;}
+        }
+
+        public class ProductoConsultarResponse{
+            public bool Error { get; set; }
+            public String Mensaje { get; set; }
+            public List<Producto> Productos{get;set;}
+            
         }
 
         public class GuardarResponse

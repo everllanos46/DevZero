@@ -62,7 +62,7 @@ namespace Datos.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("InteresadoId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("Total")
                         .HasColumnType("float");
@@ -77,8 +77,6 @@ namespace Datos.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("FacturaId");
-
-                    b.HasIndex("InteresadoId");
 
                     b.ToTable("facturas");
                 });
@@ -197,13 +195,6 @@ namespace Datos.Migrations
                         .HasForeignKey("FacturaId");
                 });
 
-            modelBuilder.Entity("Entidad.Factura", b =>
-                {
-                    b.HasOne("Entidad.Interesado", null)
-                        .WithMany("Facturas")
-                        .HasForeignKey("InteresadoId");
-                });
-
             modelBuilder.Entity("Entidad.Producto", b =>
                 {
                     b.HasOne("Entidad.Proveedor", null)
@@ -214,11 +205,6 @@ namespace Datos.Migrations
             modelBuilder.Entity("Entidad.Factura", b =>
                 {
                     b.Navigation("DetallesFactura");
-                });
-
-            modelBuilder.Entity("Entidad.Interesado", b =>
-                {
-                    b.Navigation("Facturas");
                 });
 #pragma warning restore 612, 618
         }

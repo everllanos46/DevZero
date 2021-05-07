@@ -39,6 +39,19 @@ namespace devzero.Controllers
             return Ok(Response.Producto);
         }
 
+        [HttpGet]
+        public ActionResult<ProductoViewModel> ConsultarProductos( ){
+            var Response = _service.ConsultarProductos();
+            if(Response.Error){
+                ModelState.AddModelError("Error al consultar productos", Response.Mensaje);
+                var detalleProblemas = new ValidationProblemDetails(ModelState);
+                detalleProblemas.Status=StatusCodes.Status500InternalServerError;
+
+                return BadRequest(detalleProblemas);
+            }
+            return Ok(Response.Productos);
+        }
+
         [HttpPut("producto")]
          public ActionResult<ProductoViewModel> ActualizarCantidad(int codigo, int cantidad){
             var Response = _service.ActualizarCantidadProducto(codigo, cantidad);

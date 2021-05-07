@@ -12,6 +12,7 @@ namespace devzero.Models
         public List<DetalleInputModel> DetallesFactura{get; set;}
         public string UsuarioId{get; set;}
         public string InteresadoId{get; set;}
+        
     }
 
     public class FacturaViewModel : FacturaInputModel

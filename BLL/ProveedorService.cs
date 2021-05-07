@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Datos;
 using Entidad;
+using Microsoft.EntityFrameworkCore;
 
 namespace BLL
 {
@@ -28,6 +29,31 @@ namespace BLL
             } catch(Exception e){
                 return new GuardarResponse($"Error aplicación: {e.Message}", "ERROR");
             }
+        }
+
+        public ProveedorConsultarResponse ConsultarProductos()
+        {
+            ProveedorConsultarResponse proveedorConsultarResponse = new ProveedorConsultarResponse();
+            try
+            {
+                proveedorConsultarResponse.Error = false;
+                proveedorConsultarResponse.Mensaje = "Consultado correctamente";
+                proveedorConsultarResponse.Proveedores = _TiendaContext.proveedores.ToList();
+            }
+            catch (Exception e)
+            {
+                proveedorConsultarResponse.Error = true;
+                proveedorConsultarResponse.Mensaje = $"Hubo un error al momento de consultar, {e.Message}";
+                proveedorConsultarResponse.Proveedores =null;
+            }
+            return proveedorConsultarResponse;
+        }
+
+         public class ProveedorConsultarResponse{
+            public bool Error { get; set; }
+            public String Mensaje { get; set; }
+            public List<Proveedor> Proveedores{get;set;}
+            
         }
 
         public class GuardarResponse{
