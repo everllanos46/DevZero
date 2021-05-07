@@ -1,0 +1,17 @@
+C:\Users\EVERTH LLANOS\Desktop\devze\BLL\bin\Debug\net5.0\BLL.deps.json
+C:\Users\EVERTH LLANOS\Desktop\devze\BLL\bin\Debug\net5.0\BLL.dll
+C:\Users\EVERTH LLANOS\Desktop\devze\BLL\bin\Debug\net5.0\ref\BLL.dll
+C:\Users\EVERTH LLANOS\Desktop\devze\BLL\bin\Debug\net5.0\BLL.pdb
+C:\Users\EVERTH LLANOS\Desktop\devze\BLL\bin\Debug\net5.0\Datos.dll
+C:\Users\EVERTH LLANOS\Desktop\devze\BLL\bin\Debug\net5.0\Entidad.dll
+C:\Users\EVERTH LLANOS\Desktop\devze\BLL\bin\Debug\net5.0\Datos.pdb
+C:\Users\EVERTH LLANOS\Desktop\devze\BLL\bin\Debug\net5.0\Entidad.pdb
+C:\Users\EVERTH LLANOS\Desktop\devze\BLL\obj\Debug\net5.0\BLL.csprojAssemblyReference.cache
+C:\Users\EVERTH LLANOS\Desktop\devze\BLL\obj\Debug\net5.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EVERTH LLANOS\Desktop\devze\BLL\obj\Debug\net5.0\BLL.AssemblyInfoInputs.cache
+C:\Users\EVERTH LLANOS\Desktop\devze\BLL\obj\Debug\net5.0\BLL.AssemblyInfo.cs
+C:\Users\EVERTH LLANOS\Desktop\devze\BLL\obj\Debug\net5.0\BLL.csproj.CoreCompileInputs.cache
+C:\Users\EVERTH LLANOS\Desktop\devze\BLL\obj\Debug\net5.0\BLL.csproj.CopyComplete
+C:\Users\EVERTH LLANOS\Desktop\devze\BLL\obj\Debug\net5.0\BLL.dll
+C:\Users\EVERTH LLANOS\Desktop\devze\BLL\obj\Debug\net5.0\ref\BLL.dll
+C:\Users\EVERTH LLANOS\Desktop\devze\BLL\obj\Debug\net5.0\BLL.pdb
