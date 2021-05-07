@@ -22,7 +22,8 @@ namespace BLL
             try
             {
                 var Respuesta = _TiendaContext.usuarios.Find(usuario.Identificacion);
-                if (Respuesta == null)
+                var RespuestaInteresado = _TiendaContext.interesados.Find(usuario.Identificacion);
+                if (Respuesta == null && RespuestaInteresado==null)
                 {
                     if (usuario.Rol.Equals("INTERESADO"))
                     {

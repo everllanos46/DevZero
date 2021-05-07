@@ -116,11 +116,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\EVERTH LLANOS\\Desktop\\devze\\Entidad\\Entidad.csproj",
+      "projectUniqueName": "C:\\Users\\EVERTH LLANOS\\Desktop\\PruebaDevzero\\devze\\Entidad\\Entidad.csproj",
       "projectName": "Entidad",
-      "projectPath": "C:\\Users\\EVERTH LLANOS\\Desktop\\devze\\Entidad\\Entidad.csproj",
+      "projectPath": "C:\\Users\\EVERTH LLANOS\\Desktop\\PruebaDevzero\\devze\\Entidad\\Entidad.csproj",
       "packagesPath": "C:\\Users\\EVERTH LLANOS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\EVERTH LLANOS\\Desktop\\devze\\Entidad\\obj\\",
+      "outputPath": "C:\\Users\\EVERTH LLANOS\\Desktop\\PruebaDevzero\\devze\\Entidad\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\EVERTH LLANOS\\AppData\\Roaming\\NuGet\\NuGet.Config",

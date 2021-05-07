@@ -99,6 +99,8 @@ namespace Datos.Migrations
                     Codigo = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Fecha = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Descuento = table.Column<double>(type: "float", nullable: false),
                     Iva = table.Column<double>(type: "float", nullable: false),
                     TotalDescuento = table.Column<double>(type: "float", nullable: false),

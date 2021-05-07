@@ -73,7 +73,8 @@ namespace devzero.Controllers
                 Nombre=productoInputModel.Nombre,
                 Precio=productoInputModel.Precio,
                 Proveedor=productoInputModel.Proveedor,
-                Cantidad=productoInputModel.Cantidad
+                Cantidad=productoInputModel.Cantidad,
+                Description=productoInputModel.Description
 
             };
             return producto;

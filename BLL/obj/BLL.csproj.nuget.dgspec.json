@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\EVERTH LLANOS\\Desktop\\devze\\BLL\\BLL.csproj": {}
+    "C:\\Users\\EVERTH LLANOS\\Desktop\\PruebaDevzero\\devze\\BLL\\BLL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\EVERTH LLANOS\\Desktop\\devze\\BLL\\BLL.csproj": {
+    "C:\\Users\\EVERTH LLANOS\\Desktop\\PruebaDevzero\\devze\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EVERTH LLANOS\\Desktop\\devze\\BLL\\BLL.csproj",
+        "projectUniqueName": "C:\\Users\\EVERTH LLANOS\\Desktop\\PruebaDevzero\\devze\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "C:\\Users\\EVERTH LLANOS\\Desktop\\devze\\BLL\\BLL.csproj",
+        "projectPath": "C:\\Users\\EVERTH LLANOS\\Desktop\\PruebaDevzero\\devze\\BLL\\BLL.csproj",
         "packagesPath": "C:\\Users\\EVERTH LLANOS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EVERTH LLANOS\\Desktop\\devze\\BLL\\obj\\",
+        "outputPath": "C:\\Users\\EVERTH LLANOS\\Desktop\\PruebaDevzero\\devze\\BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\EVERTH LLANOS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\EVERTH LLANOS\\Desktop\\devze\\Datos\\Datos.csproj": {
-                "projectPath": "C:\\Users\\EVERTH LLANOS\\Desktop\\devze\\Datos\\Datos.csproj"
+              "C:\\Users\\EVERTH LLANOS\\Desktop\\PruebaDevzero\\devze\\Datos\\Datos.csproj": {
+                "projectPath": "C:\\Users\\EVERTH LLANOS\\Desktop\\PruebaDevzero\\devze\\Datos\\Datos.csproj"
               },
-              "C:\\Users\\EVERTH LLANOS\\Desktop\\devze\\Entidad\\Entidad.csproj": {
-                "projectPath": "C:\\Users\\EVERTH LLANOS\\Desktop\\devze\\Entidad\\Entidad.csproj"
+              "C:\\Users\\EVERTH LLANOS\\Desktop\\PruebaDevzero\\devze\\Entidad\\Entidad.csproj": {
+                "projectPath": "C:\\Users\\EVERTH LLANOS\\Desktop\\PruebaDevzero\\devze\\Entidad\\Entidad.csproj"
               }
             }
           }
@@ -65,14 +65,14 @@
         }
       }
     },
-    "C:\\Users\\EVERTH LLANOS\\Desktop\\devze\\Datos\\Datos.csproj": {
+    "C:\\Users\\EVERTH LLANOS\\Desktop\\PruebaDevzero\\devze\\Datos\\Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EVERTH LLANOS\\Desktop\\devze\\Datos\\Datos.csproj",
+        "projectUniqueName": "C:\\Users\\EVERTH LLANOS\\Desktop\\PruebaDevzero\\devze\\Datos\\Datos.csproj",
         "projectName": "Datos",
-        "projectPath": "C:\\Users\\EVERTH LLANOS\\Desktop\\devze\\Datos\\Datos.csproj",
+        "projectPath": "C:\\Users\\EVERTH LLANOS\\Desktop\\PruebaDevzero\\devze\\Datos\\Datos.csproj",
         "packagesPath": "C:\\Users\\EVERTH LLANOS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EVERTH LLANOS\\Desktop\\devze\\Datos\\obj\\",
+        "outputPath": "C:\\Users\\EVERTH LLANOS\\Desktop\\PruebaDevzero\\devze\\Datos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\EVERTH LLANOS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -89,8 +89,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\EVERTH LLANOS\\Desktop\\devze\\Entidad\\Entidad.csproj": {
-                "projectPath": "C:\\Users\\EVERTH LLANOS\\Desktop\\devze\\Entidad\\Entidad.csproj"
+              "C:\\Users\\EVERTH LLANOS\\Desktop\\PruebaDevzero\\devze\\Entidad\\Entidad.csproj": {
+                "projectPath": "C:\\Users\\EVERTH LLANOS\\Desktop\\PruebaDevzero\\devze\\Entidad\\Entidad.csproj"
               }
             }
           }
@@ -141,14 +141,14 @@
         }
       }
     },
-    "C:\\Users\\EVERTH LLANOS\\Desktop\\devze\\Entidad\\Entidad.csproj": {
+    "C:\\Users\\EVERTH LLANOS\\Desktop\\PruebaDevzero\\devze\\Entidad\\Entidad.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EVERTH LLANOS\\Desktop\\devze\\Entidad\\Entidad.csproj",
+        "projectUniqueName": "C:\\Users\\EVERTH LLANOS\\Desktop\\PruebaDevzero\\devze\\Entidad\\Entidad.csproj",
         "projectName": "Entidad",
-        "projectPath": "C:\\Users\\EVERTH LLANOS\\Desktop\\devze\\Entidad\\Entidad.csproj",
+        "projectPath": "C:\\Users\\EVERTH LLANOS\\Desktop\\PruebaDevzero\\devze\\Entidad\\Entidad.csproj",
         "packagesPath": "C:\\Users\\EVERTH LLANOS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EVERTH LLANOS\\Desktop\\devze\\Entidad\\obj\\",
+        "outputPath": "C:\\Users\\EVERTH LLANOS\\Desktop\\PruebaDevzero\\devze\\Entidad\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\EVERTH LLANOS\\AppData\\Roaming\\NuGet\\NuGet.Config",

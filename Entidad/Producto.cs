@@ -9,6 +9,8 @@ namespace Entidad
         [Key] [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
        public int Codigo{get; set;}
        public String Nombre {get; set;}
+       public String Description{get; set;}
+       public String Fecha{get; set;}
        public double Descuento {get; set;}
        public double Iva {get; set;}
        public double TotalDescuento {get; set;}
@@ -33,6 +35,10 @@ namespace Entidad
            CalcularIVA();
            Total = Precio - Descuento;
            Total =Total+TotalIva;
+       }
+
+       public void Date(){
+           Fecha= DateTime.Now.ToShortDateString();
        }
     }
 }

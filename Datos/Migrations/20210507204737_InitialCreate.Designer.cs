@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Datos.Migrations
 {
     [DbContext(typeof(TiendaContext))]
-    [Migration("20210507055604_InitialCreate")]
+    [Migration("20210507204737_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -118,8 +118,14 @@ namespace Datos.Migrations
                     b.Property<int>("Cantidad")
                         .HasColumnType("int");
 
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<double>("Descuento")
                         .HasColumnType("float");
+
+                    b.Property<string>("Fecha")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IdProveedor")
                         .HasColumnType("nvarchar(450)");

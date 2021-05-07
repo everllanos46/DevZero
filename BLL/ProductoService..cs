@@ -23,16 +23,13 @@ namespace BLL
                 if (Respuesta == null)
                 {
                     producto.IdProveedor = producto.Proveedor.IdProveedor;
-                    if (_TiendaContext.proveedores.Find(producto.IdProveedor) != null)
+                    if (_TiendaContext.proveedores.Find(producto.IdProveedor) == null)
                     {
-                        producto.CalcularTotal();
-                        _TiendaContext.productos.Add(producto);
-                    }else{
                         _TiendaContext.proveedores.Add(producto.Proveedor);
-                        producto.CalcularTotal();
-                        _TiendaContext.productos.Add(producto);
                     }
-
+                    producto.CalcularTotal();
+                    producto.Date();
+                    _TiendaContext.productos.Add(producto);
                     _TiendaContext.SaveChanges();
                     return new GuardarResponse(producto);
                 }
@@ -70,7 +67,7 @@ namespace BLL
             {
                 productoConsultarResponse.Error = false;
                 productoConsultarResponse.Mensaje = "Consultado correctamente";
-                productoConsultarResponse.Productos = _TiendaContext.productos.Include(p => p.Proveedor).ToList();
+                productoConsultarResponse.Productos = _TiendaContext.productos.ToList();
             }
             catch (Exception e)
             {

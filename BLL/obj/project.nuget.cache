@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QDWyxhL0mkNBxl8BrFNbIbGt4XsFbOf8lakfp2Y0JDsuzWJCxAhZ6OLnaEbSQ9SfjPlGAe61U4JAzoqqo2TFTA==",
+  "dgSpecHash": "eyiPX8j3kkCWXKFOUfKynn8//quQYWliiv70ByTocIF6iFEwx4blV5Zn0Uj9yfe5E21K0Zn7qxzEy2T4mB4v+w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\EVERTH LLANOS\\Desktop\\devze\\BLL\\BLL.csproj",
+  "projectFilePath": "C:\\Users\\EVERTH LLANOS\\Desktop\\PruebaDevzero\\devze\\BLL\\BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\EVERTH LLANOS\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\EVERTH LLANOS\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

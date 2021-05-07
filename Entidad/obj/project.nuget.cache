@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nkJy/TYNI13QMyXKmHv4i508lwsMK/teii3K/UXL28Br6/cObpsa+qu3jkza1Vn/pxaP6g4SmXjpmF/EQbd26A==",
+  "dgSpecHash": "RKW36VSofbuvG3/eQCxomI4a3vfTiZwth+gQhU6UELKgNc6G7roWBlMm1ki1eO+aJ3ip+w0dnF3RKVjf1JMeZw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\EVERTH LLANOS\\Desktop\\devze\\Entidad\\Entidad.csproj",
+  "projectFilePath": "C:\\Users\\EVERTH LLANOS\\Desktop\\PruebaDevzero\\devze\\Entidad\\Entidad.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\EVERTH LLANOS\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],

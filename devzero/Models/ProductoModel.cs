@@ -11,7 +11,8 @@ namespace devzero.Models
        public String Nombre {get; set;}
        public double Descuento {get; set;}
        public double Iva {get; set;}
-
+    
+        public string Description{get;set;}
        public double Precio{get; set;}
   
        public int Cantidad{get; set;}
@@ -33,6 +34,7 @@ namespace devzero.Models
             Iva=producto.Iva;
             Precio=producto.Precio;
             Proveedor=producto.Proveedor;
+            Description=producto.Description;
         }
 
 

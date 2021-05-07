@@ -33,6 +33,7 @@ namespace devzero.Controllers
                 }
                 return BadRequest(detalleProblemas);
             }
+            Response.Mensaje="Usuario registrado";
             return Ok(Response.Usuario);
         }
 
