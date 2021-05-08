@@ -18,6 +18,7 @@ namespace Datos
         public DbSet<Usuario> usuarios{get; set;}
         public DbSet<Interesado> interesados{get; set;}
         public DbSet<Factura> facturas {get; set;}
+        public DbSet<FacturaCompra>  facturaCompras{get;set;}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

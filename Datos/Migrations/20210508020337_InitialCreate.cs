@@ -7,6 +7,22 @@ namespace Datos.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "facturaCompras",
+                columns: table => new
+                {
+                    FacturaId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Total = table.Column<double>(type: "float", nullable: false),
+                    TotalDescontado = table.Column<double>(type: "float", nullable: false),
+                    TotalIVA = table.Column<double>(type: "float", nullable: false),
+                    UsuarioId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ProveedorId = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_facturaCompras", x => x.FacturaId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "facturas",
                 columns: table => new
                 {
@@ -79,11 +95,18 @@ namespace Datos.Migrations
                     TotalDescontado = table.Column<double>(type: "float", nullable: false),
                     TotalIVA = table.Column<double>(type: "float", nullable: false),
                     ProductoId = table.Column<int>(type: "int", nullable: false),
+                    FacturaCompraFacturaId = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     FacturaId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_detalles", x => x.DetalleId);
+                    table.ForeignKey(
+                        name: "FK_detalles_facturaCompras_FacturaCompraFacturaId",
+                        column: x => x.FacturaCompraFacturaId,
+                        principalTable: "facturaCompras",
+                        principalColumn: "FacturaId",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_detalles_facturas_FacturaId",
                         column: x => x.FacturaId,
@@ -122,6 +145,11 @@ namespace Datos.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_detalles_FacturaCompraFacturaId",
+                table: "detalles",
+                column: "FacturaCompraFacturaId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_detalles_FacturaId",
                 table: "detalles",
                 column: "FacturaId");
@@ -145,6 +173,9 @@ namespace Datos.Migrations
 
             migrationBuilder.DropTable(
                 name: "usuarios");
+
+            migrationBuilder.DropTable(
+                name: "facturaCompras");
 
             migrationBuilder.DropTable(
                 name: "facturas");

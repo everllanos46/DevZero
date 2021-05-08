@@ -18,8 +18,6 @@ namespace Entidad
         public int ProductoId{get;set;}
         [NotMapped]
         public Producto Producto{get; set;}
-
-
         public void CalcularTotalDescontado(){
             TotalDescontado=(ValorProducto*(Descuento/100))*CantidadProducto;
         }

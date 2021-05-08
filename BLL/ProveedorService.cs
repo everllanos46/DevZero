@@ -31,7 +31,7 @@ namespace BLL
             }
         }
 
-        public ProveedorConsultarResponse ConsultarProductos()
+        public ProveedorConsultarResponse ConsultarProveedores()
         {
             ProveedorConsultarResponse proveedorConsultarResponse = new ProveedorConsultarResponse();
             try

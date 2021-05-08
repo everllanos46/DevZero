@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Datos.Migrations
 {
     [DbContext(typeof(TiendaContext))]
-    [Migration("20210507204737_InitialCreate")]
+    [Migration("20210508020337_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,6 +32,9 @@ namespace Datos.Migrations
                     b.Property<double>("Descuento")
                         .HasColumnType("float");
 
+                    b.Property<string>("FacturaCompraFacturaId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("FacturaId")
                         .HasColumnType("nvarchar(450)");
 
@@ -51,6 +54,8 @@ namespace Datos.Migrations
                         .HasColumnType("float");
 
                     b.HasKey("DetalleId");
+
+                    b.HasIndex("FacturaCompraFacturaId");
 
                     b.HasIndex("FacturaId");
 
@@ -81,6 +86,32 @@ namespace Datos.Migrations
                     b.HasKey("FacturaId");
 
                     b.ToTable("facturas");
+                });
+
+            modelBuilder.Entity("Entidad.FacturaCompra", b =>
+                {
+                    b.Property<string>("FacturaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProveedorId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Total")
+                        .HasColumnType("float");
+
+                    b.Property<double>("TotalDescontado")
+                        .HasColumnType("float");
+
+                    b.Property<double>("TotalIVA")
+                        .HasColumnType("float");
+
+                    b.Property<string>("UsuarioId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("FacturaId");
+
+                    b.ToTable("facturaCompras");
                 });
 
             modelBuilder.Entity("Entidad.Interesado", b =>
@@ -198,6 +229,10 @@ namespace Datos.Migrations
 
             modelBuilder.Entity("Entidad.Detalle", b =>
                 {
+                    b.HasOne("Entidad.FacturaCompra", null)
+                        .WithMany("DetallesFactura")
+                        .HasForeignKey("FacturaCompraFacturaId");
+
                     b.HasOne("Entidad.Factura", null)
                         .WithMany("DetallesFactura")
                         .HasForeignKey("FacturaId");
@@ -211,6 +246,11 @@ namespace Datos.Migrations
                 });
 
             modelBuilder.Entity("Entidad.Factura", b =>
+                {
+                    b.Navigation("DetallesFactura");
+                });
+
+            modelBuilder.Entity("Entidad.FacturaCompra", b =>
                 {
                     b.Navigation("DetallesFactura");
                 });
